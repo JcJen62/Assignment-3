@@ -1,0 +1,32 @@
+header,
+nav,
+main,
+.hero,
+footer {
+    max-width: 1200px;
+    margin: auto;
+}
+
+header img{
+    padding-top: 15px;
+}
+
+header h2 {
+    display: block;
+}
+
+nav ul {
+    padding-left: $gutter;
+}
+
+nav li {
+    width: auto;
+}
+
+nav a {
+    padding: .5rem 1rem;
+}
+
+div.gallery figure {
+    flex-basis: 20%;
+}

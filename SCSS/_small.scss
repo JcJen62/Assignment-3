@@ -1,0 +1,126 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* body rules */
+body {
+    font-family: $fontFamily;
+    font-size: 16px;
+    font-weight: $regularWeight;
+}
+
+header {
+    padding: 1rem $gutter;
+    display: grid;
+    grid-template-columns: 100px auto;
+    background-color: $primaryColor;
+
+    img {
+        width: 100px;
+    }
+
+    div {
+        margin-top: 1.8rem;
+    }
+
+    h1 {
+        color: white;
+        padding-top: 1rem;
+        font-size: 1.8rem;
+        font-weight: $heavyWeight;
+        margin: 0;
+    }
+
+    // end of h1
+    h2 {
+        color: white;
+        margin: 0;
+        font-size: 1.2rem;
+        font-weight: $regularWeight;
+        display: none;
+    }
+
+    // end of h2
+}
+
+//end of header 
+
+
+nav {
+    background-color: lighten($navColor, 8%);
+
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    // end of ul 
+    li {
+        list-style-type: none;
+    }
+
+    li.active {
+        background-color: rgb(75, 41, 41)
+    }
+
+    // end of li
+    a {
+        display: block;
+        padding: .8rem 0;
+        /*44px min*/
+        color: #eee;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    a:hover {
+        background-color: darken(#444, 10%);
+    }
+
+    // end of a
+}
+
+// main
+main {
+    background-color: rgb(255, 255, 255);
+}
+
+div.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+div.gallery figure {
+    flex-basis: 40%;
+    margin: 1rem $gutter;
+}
+
+div.gallery figure img {
+    width: 100%;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem $gutter;
+    color: rgb(0, 0, 0);
+    background-color: #d8d3ce;
+    font-weight: $heavyWeight;
+}
+
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
